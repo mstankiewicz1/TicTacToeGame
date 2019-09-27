@@ -4,14 +4,12 @@ import Board from './Board.jsx';
 class App extends React.Component {
 
 
-    //noinspection JSAnnotator
     state = {
         boxes: [],
         player1: 'Marek',
         player2: 'Janusz',
-        currentPlayer: null,
-        round: 1,
-
+        currentPlayer: 'Marek',
+        round: 0,
     };
 
     boxPressed = () => {
@@ -22,8 +20,7 @@ class App extends React.Component {
             });
             console.log(this.state.round);
             console.log(this.state.currentPlayer);
-        };
-
+            };
 
 
 

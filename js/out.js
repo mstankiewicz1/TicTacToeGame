@@ -22561,9 +22561,8 @@ var App = function (_React$Component) {
             boxes: [],
             player1: 'Marek',
             player2: 'Janusz',
-            currentPlayer: null,
-            round: 1
-
+            currentPlayer: 'Marek',
+            round: 0
         }, _this.boxPressed = function () {
             var pickPlayer = _this.state.round % 2 === 0 ? _this.state.player2 : _this.state.player1;
             _this.setState({
@@ -22574,9 +22573,6 @@ var App = function (_React$Component) {
             console.log(_this.state.currentPlayer);
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
-
-    //noinspection JSAnnotator
-
 
     _createClass(App, [{
         key: 'render',
@@ -22640,6 +22636,7 @@ var Board = function (_React$Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.clickBox = function () {
             _this.props.singleBoxPressed();
+            _this;
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -22649,15 +22646,15 @@ var Board = function (_React$Component) {
             return _react2.default.createElement(
                 "div",
                 { className: "board" },
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "0", "data-column": "0", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "0", "data-column": "1", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "0", "data-column": "2", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "1", "data-column": "0", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "1", "data-column": "1", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "1", "data-column": "2", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "2", "data-column": "0", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "2", "data-column": "1", onClick: this.clickBox }),
-                _react2.default.createElement("div", { name: "box", className: "box", "data-row": "2", "data-column": "2", onClick: this.clickBox })
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox }),
+                _react2.default.createElement("div", { className: "box", onClick: this.clickBox })
             );
         }
     }]);
