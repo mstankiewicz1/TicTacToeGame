@@ -4,13 +4,27 @@ import Board from './Board.jsx';
 class App extends React.Component {
 
 
+    //noinspection JSAnnotator
     state = {
         boxes: [],
+        player1: 'Marek',
+        player2: 'Janusz',
+        currentPlayer: null,
+        round: 1,
+
     };
 
     boxPressed = () => {
-      console.log("wcisnąlem pole");
-    };
+        const pickPlayer = this.state.round%2 === 0 ? this.state.player2 : this.state.player1;
+            this.setState({
+                round: this.state.round + 1,
+                currentPlayer: pickPlayer,
+            });
+            console.log(this.state.round);
+            console.log(this.state.currentPlayer);
+        };
+
+
 
 
     render() {

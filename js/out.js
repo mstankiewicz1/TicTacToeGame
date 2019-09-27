@@ -22558,11 +22558,25 @@ var App = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            boxes: []
+            boxes: [],
+            player1: 'Marek',
+            player2: 'Janusz',
+            currentPlayer: null,
+            round: 1
+
         }, _this.boxPressed = function () {
-            console.log("wcisnąlem pole");
+            var pickPlayer = _this.state.round % 2 === 0 ? _this.state.player2 : _this.state.player1;
+            _this.setState({
+                round: _this.state.round + 1,
+                currentPlayer: pickPlayer
+            });
+            console.log(_this.state.round);
+            console.log(_this.state.currentPlayer);
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
+
+    //noinspection JSAnnotator
+
 
     _createClass(App, [{
         key: 'render',
